@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskZone - Giriş</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>👋 Hoşgeldiniz</h1>
+    <input type="text" id="usernameInput" placeholder="Kullanıcı adınızı girin">
+    <button onclick="login()">Giriş Yap</button>
+  </div>
+  <script>
+    function login() {
+      const username = document.getElementById("usernameInput").value.trim();
+      if (username === "") {
+        alert("Lütfen kullanıcı adı girin");
+        return;
+      }
+      localStorage.setItem("taskzone_user", username);
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskZone - Görev Paneli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 id="greeting">Merhaba!</h2>
+
+    <!-- Görev ekleme alanı -->
+    <input type="text" id="taskInput" placeholder="Yeni görev girin...">
+    <button onclick="addTask()">Ekle</button>
+
+    <!-- Filtreleme -->
+    <select id="filter" onchange="loadTasks()">
+      <option value="all">Tümü</option>
+      <option value="done">Tamamlanan</option>
+      <option value="undone">Yapılacaklar</option>
+    </select>
+
+    <!-- Görevler -->
+    <ul id="taskList"></ul>
+
+    <!-- Tema & Çıkış butonları -->
+    <div style="margin-top: 20px;">
+      <button onclick="toggleTheme()">🌗 Tema Değiştir</button>
+      <button onclick="logout()">Çıkış Yap</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
